@@ -1,6 +1,6 @@
 Config = {}
 
-Config.DebugInConsole = true
+Config.DebugInConsole = false
 
 Config.Vehicles = {
     [`buffalo4`] = {
@@ -11,5 +11,5 @@ Config.Vehicles = {
     },
     [`phantom3`] = {
         ["GearRatios"] = {-11.26, 9.65, 7.43, 5.80, 4.48, 3.54, 2.73, 2.10, 1.64, 1.27, 1.00} -- Eaton Fuller R-96T
-    },
+    }
 }
