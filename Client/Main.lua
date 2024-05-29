@@ -10,6 +10,10 @@ Citizen.CreateThread(function()
             if (Config.Vehicles[GetEntityModel(vehicle)]) then -- check if vehicle model is in config
                 DebugPrint("Vehicle found applying ratios")
                 local vehicleData = Config.Vehicles[GetEntityModel(vehicle)]
+                if (GetVehicleMod(vehicle, 13) ~= -1) then
+                    SetVehicleModKit(vehicle, 0)
+                    SetVehicleMod(vehicle, 13, -1)
+                end
                 if (GetVehicleHandlingInt(vehicle, "CHandlingData", "nInitialDriveGears") ~= #vehicleData.GearRatios-1) then -- set vehicle number of gears
                     SetVehicleHandlingInt(vehicle, "CHandlingData", "nInitialDriveGears", #vehicleData.GearRatios-1)
                 end
